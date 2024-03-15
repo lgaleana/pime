@@ -1,7 +1,10 @@
 from fastapi import FastAPI, Query, Request
 from fastapi.templating import Jinja2Templates
+from dotenv import load_dotenv
 import api
 import os
+
+load_dotenv()
 
 app = FastAPI()
 

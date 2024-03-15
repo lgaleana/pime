@@ -1,8 +1,10 @@
 import unittest
 from unittest.mock import patch
+from dotenv import load_dotenv
 import api
 import os
 
+load_dotenv()
 
 class TestApi(unittest.TestCase):
     @patch('requests.get')

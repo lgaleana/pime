@@ -1,8 +1,11 @@
 import unittest
 from unittest.mock import patch
 from fastapi.testclient import TestClient
+from dotenv import load_dotenv
 from main import app
 import os
+
+load_dotenv()
 
 class TestMain(unittest.TestCase):
 
