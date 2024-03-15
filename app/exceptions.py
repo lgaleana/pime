@@ -1,0 +1,2 @@
+class FlightSearchError(Exception):
+    pass
