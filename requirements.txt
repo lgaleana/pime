@@ -4,4 +4,3 @@ requests
 uvicorn
 httpx
 jinja2
-docker
