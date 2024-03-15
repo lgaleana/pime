@@ -1,11 +1,11 @@
+from fastapi import FastAPI
 import api
 
+app = FastAPI()
 
-def main():
+
+@app.get('/search')
+def search_flights():
     params = {}
     response = api.search_flights(params)
-    print(response)
-
-
-if __name__ == '__main__':
-    main()
+    return response
