@@ -2,3 +2,5 @@ fastapi
 pytest
 requests
 uvicorn
+httpx
+jinja2
