@@ -1,7 +1,15 @@
 from pydantic import BaseModel
 
 class FlightSearch(BaseModel):
-    pass
+    origin: str
+    destination: str
+    departure_date: str
+    return_date: str
 
 class FlightResult(BaseModel):
-    pass
+    id: str
+    origin: str
+    destination: str
+    departure_date: str
+    return_date: str
+    price: float
