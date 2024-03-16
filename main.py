@@ -17,4 +17,7 @@ def search(request: Request):
 def search_flights(request: Request, fly_from: str = Query(...), fly_to: str = Query(...), date_from: str = Query(...), date_to: str = Query(...)):
     params = {'fly_from': fly_from, 'fly_to': fly_to, 'date_from': date_from, 'date_to': date_to}
     response = api.search_flights(params)
-    return templates.TemplateResponse('results.html', {'request': request, 'flights': response['data']})
+    if response['data']:
+        return templates.TemplateResponse('results.html', {'request': request, 'flights': response['data']})
+    else:
+        return templates.TemplateResponse('no_results.html', {'request': request})
