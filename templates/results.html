@@ -6,7 +6,26 @@
 </head>
 <body>
 <table>
-<!-- Table headers and data will be dynamically generated -->
+<tr>
+<th>Departure City</th>
+<th>Arrival City</th>
+<th>Departure Date</th>
+<th>Arrival Date</th>
+<th>Duration</th>
+<th>Price</th>
+<th>Airline</th>
+</tr>
+{% for flight in flights %}
+<tr>
+<td>{{ flight.cityFrom }}</td>
+<td>{{ flight.cityTo }}</td>
+<td>{{ flight.local_departure }}</td>
+<td>{{ flight.local_arrival }}</td>
+<td>{{ flight.duration.total }}</td>
+<td>{{ flight.price }}</td>
+<td>{{ flight.airlines[0] }}</td>
+</tr>
+{% endfor %}
 </table>
 </body>
 </html>
