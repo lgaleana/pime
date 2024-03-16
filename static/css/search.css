@@ -25,6 +25,18 @@ input[type='submit']:hover {
 background-color: #45a049;
 }
 
+@media (max-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+  label, input {
+    margin: 15px 0;
+  }
+  input[type='submit'] {
+    padding: 15px 30px;
+  }
+}
+
 @media (min-width: 600px) {
 form {
 width: 300px;
