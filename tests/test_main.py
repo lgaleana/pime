@@ -3,7 +3,6 @@ from unittest.mock import patch
 from fastapi.testclient import TestClient
 from main import app
 
-
 class TestMain(unittest.TestCase):
 
     @patch('main.api.search_flights', return_value={'flights': []})
