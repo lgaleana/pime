@@ -11,7 +11,7 @@ def search(request: Request):
     return templates.TemplateResponse('search.html', {'request': request})
 
 @app.get('/search')
-def search_flights(fly_from_city: str = Query(...), to_city: str = Query(...), date: str = Query(...)):
-    params = {'fly_from': fly_from_city, 'to': to_city, 'date': date}
+def search_flights(fly_from: str = Query(...), fly_to: str = Query(...), date_from: str = Query(...), date_to: str = Query(...)):
+    params = {'fly_from': fly_from, 'fly_to': fly_to, 'date_from': date_from, 'date_to': date_to}
     response = api.search_flights(params)
     return response
