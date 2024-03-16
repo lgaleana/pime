@@ -20,5 +20,6 @@ CITY_TO_KIWI_ID = {
 def search_flights(params):
     headers = {'apikey': os.getenv('TEQUILA_API_KEY')}
     params['fly_from'] = CITY_TO_KIWI_ID[params['fly_from']]
+    params['fly_to'] = CITY_TO_KIWI_ID[params['fly_to']]
     response = requests.get('https://tequila-api.kiwi.com/v2/search', params=params, headers=headers)
     return response.json()
