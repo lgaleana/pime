@@ -1,17 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel='stylesheet' type='text/css' href='/static/css/search.css'>
+    <link rel='stylesheet' type='text/css' href='/static/css/search.css'>
+    <title>Flight Search</title>
 </head>
 <body>
-<form action='/search' method='get'>
-<label for='from_city'>From:</label><br>
-<input type='text' id='from_city' name='from_city'><br>
-<label for='to_city'>To:</label><br>
-<input type='text' id='to_city' name='to_city'><br>
-<label for='date'>Date:</label><br>
-<input type='date' id='date' name='date'><br>
-<input type='submit' value='Search'>
-</form>
+    <form action="/search" method="get">
+        <label for="fly_from_city">From:</label>
+        <select id="fly_from_city" name="fly_from_city">
+            <option value="New York">New York</option>
+            <option value="Los Angeles">Los Angeles</option>
+            <option value="Chicago">Chicago</option>
+            <option value="Houston">Houston</option>
+            <option value="Phoenix">Phoenix</option>
+            <option value="Philadelphia">Philadelphia</option>
+            <option value="San Antonio">San Antonio</option>
+            <option value="San Diego">San Diego</option>
+            <option value="Dallas">Dallas</option>
+            <option value="San Jose">San Jose</option>
+        </select>
+        <label for="to_city">To:</label>
+        <select id="to_city" name="to_city">
+            <option value="New York">New York</option>
+            <option value="Los Angeles">Los Angeles</option>
+            <option value="Chicago">Chicago</option>
+            <option value="Houston">Houston</option>
+            <option value="Phoenix">Phoenix</option>
+            <option value="Philadelphia">Philadelphia</option>
+            <option value="San Antonio">San Antonio</option>
+            <option value="San Diego">San Diego</option>
+            <option value="Dallas">Dallas</option>
+            <option value="San Jose">San Jose</option>
+        </select>
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+        <input type="submit" value="Search">
+    </form>
 </body>
 </html>

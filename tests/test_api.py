@@ -2,7 +2,6 @@ import unittest
 from unittest.mock import patch
 import api
 
-
 class TestApi(unittest.TestCase):
     @patch('os.getenv')
     @patch('requests.get')
