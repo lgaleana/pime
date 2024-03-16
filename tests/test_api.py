@@ -3,7 +3,6 @@ from unittest.mock import patch
 import api
 
 class TestApi(unittest.TestCase):
-
     @patch('os.getenv')
     @patch('requests.get')
     def test_search_flights(self, mock_get, mock_getenv):
