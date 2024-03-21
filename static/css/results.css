@@ -22,6 +22,10 @@ color: white;
   th, td {
     padding: 15px;
   }
+  table {
+    display: block;
+    overflow-x: auto;
+  }
 }
 
 @media (min-width: 600px) {
